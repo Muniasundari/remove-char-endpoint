@@ -41,7 +41,7 @@ Create a Spring Boot REST API with one GET endpoint `/remove` that transforms a 
 | `ab`              | ``             | 2 chars → return empty string         |
 | `a`               | 400 Bad Request| Only 1 char → invalid                 |
 | `xyz`             | `y`            | Remove `x` and `z`                    |
-| `123%qwerty+`     | `123%qwerty`   | Starts with digit → remove last only |
+| `123%qwerty+`     | `123_%qwerty`   | Starts with digit → add underscore after digit and remove last only |
 | `a123%qwerty+`    | `123%qwerty`   | Remove `a` and `+`                    |
 
 ---
